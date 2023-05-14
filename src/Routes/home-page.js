@@ -3,24 +3,24 @@
 import React from "react";
 // import Menu from "../Components/menu";
 // import LoginIcon from "../Components/login-icon";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import '../Static/inspinia/style/style.css';
-import './css/bootstrap.min.css';
-import '../../node_modules/font-awesome/css/font-awesome.css';
-import './css/animate.css';
+// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../../node_modules/font-awesome/css/font-awesome.css';
+// import '../../node_modules/animate.css/animate.min.css';
+// import './../Static/inspinia/style/style.css';
 
+import pic1 from "./img/landing/laptop.png";
+import pic2 from "./img/landing/perspective.png";
+import pic3 from "./img/landing/dashboard.png";
+import pic4 from "./img/landing/avatar3.jpg";
+import pic5 from "./img/landing/avatar1.jpg";
+import pic6 from "./img/landing/avatar2.jpg";
+import pic7 from "./img/landing/iphone.jpg";
+import pic8 from "./img/landing/avatar3.jpg";
+import pic9 from "./img/landing/avatar1.jpg";
+import pic10 from "./img/landing/avatar2.jpg";
 
-// import pic1 from "./img/landing/laptop.png";
-// import pic2 from "./img/landing/perspective.png";
-// import pic3 from "./img/landing/dashboard.png";
-// import pic4 from "./img/landing/avatar3.jpg";
-// import pic5 from "./img/landing/avatar1.jpg";
-// import pic6 from "./img/landing/avatar2.jpg";
-// import pic7 from "./img/landing/iphone.jpg";
-// import pic8 from "./img/landing/avatar3.jpg";
-// import pic9 from "./img/landing/avatar1.jpg";
-// import pic10 from "./img/landing/avatar2.jpg";
 
 class Home extends React.Component {
     componentDidMount() {
@@ -46,7 +46,6 @@ class Home extends React.Component {
                 let src = scriptSourceList[counter]
                 if (!Array.from(document.getElementsByTagName("script")).map(getSrc).includes(src)) {
                     if (Array.from(document.getElementsByTagName("script")).map(getSrc).includes(jquerySrc)) {
-
                         script = document.createElement("script");
                         script.src = src;
                         script.async = false;
@@ -56,7 +55,6 @@ class Home extends React.Component {
                         script.src = jquerySrc;
                         script.async = false;
                         document.body.appendChild(script);
-
                     }
                 }
             }
@@ -111,7 +109,7 @@ class Home extends React.Component {
                                     </p>
                                 </div>
                                 <div className="carousel-image wow zoomIn">
-                                    <img src="img/landing/laptop.png" alt="laptop" />
+                                    <img src={pic1} alt="laptop" />
                                 </div>
                             </div>
                             <div className="header-back one"></div>
@@ -186,7 +184,7 @@ class Home extends React.Component {
                             </div>
                         </div>
                         <div className="col-md-6 text-center  wow zoomIn">
-                            <img src="img/landing/perspective.png" alt="dashboard" className="img-responsive" />
+                            <img src={pic2} alt="dashboard" className="img-responsive" />
                         </div>
                         <div className="col-md-3 text-center wow fadeInRight">
                             <div>
@@ -216,7 +214,7 @@ class Home extends React.Component {
                             <a href="" className="btn btn-primary">Learn more</a>
                         </div>
                         <div className="col-lg-6 text-right wow fadeInRight">
-                            <img src="img/landing/dashboard.png" alt="dashboard" className="img-responsive pull-right" />
+                            <img src={pic3} alt="dashboard" className="img-responsive pull-right" />
                         </div>
                     </div>
                 </section>
@@ -233,47 +231,47 @@ class Home extends React.Component {
                         <div className="row">
                             <div className="col-sm-4 wow fadeInLeft">
                                 <div className="team-member">
-                                    <img src="img/landing/avatar3.jpg" className="img-responsive img-circle img-small" alt="" />
-                                        <h4><span className="navy">Amelia</span> Smith</h4>
-                                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus. </p>
-                                        <ul className="list-inline social-icon">
-                                            <li><a href="#"><i className="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-linkedin"></i></a>
-                                            </li>
-                                        </ul>
+                                    <img src={pic4} className="img-responsive img-circle img-small" alt="" />
+                                    <h4><span className="navy">Amelia</span> Smith</h4>
+                                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus. </p>
+                                    <ul className="list-inline social-icon">
+                                        <li><a href="#"><i className="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-linkedin"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div className="col-sm-4">
                                 <div className="team-member wow zoomIn">
-                                    <img src="img/landing/avatar1.jpg" className="img-responsive img-circle" alt="" />
-                                        <h4><span className="navy">John</span> Novak</h4>
-                                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
-                                        <ul className="list-inline social-icon">
-                                            <li><a href="#"><i className="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-linkedin"></i></a>
-                                            </li>
-                                        </ul>
+                                    <img src={pic5} className="img-responsive img-circle" alt="" />
+                                    <h4><span className="navy">John</span> Novak</h4>
+                                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
+                                    <ul className="list-inline social-icon">
+                                        <li><a href="#"><i className="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-linkedin"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div className="col-sm-4 wow fadeInRight">
                                 <div className="team-member">
-                                    <img src="img/landing/avatar2.jpg" className="img-responsive img-circle img-small" alt="" />
-                                        <h4><span className="navy">Peter</span> Johnson</h4>
-                                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
-                                        <ul className="list-inline social-icon">
-                                            <li><a href="#"><i className="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li><a href="#"><i className="fa fa-linkedin"></i></a>
-                                            </li>
-                                        </ul>
+                                    <img src={pic6} className="img-responsive img-circle img-small" alt="" />
+                                    <h4><span className="navy">Peter</span> Johnson</h4>
+                                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
+                                    <ul className="list-inline social-icon">
+                                        <li><a href="#"><i className="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i className="fa fa-linkedin"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -302,7 +300,7 @@ class Home extends React.Component {
                                 <a href="" className="btn btn-primary">Learn more</a>
                             </div>
                             <div className="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                                <img src="img/landing/iphone.jpg" className="img-responsive" alt="dashboard" />
+                                <img src={pic7} className="img-responsive" alt="dashboard" />
                             </div>
                             <div className="col-lg-3 features-text text-right wow fadeInRight">
                                 <small>INSPINIA</small>
@@ -376,7 +374,7 @@ class Home extends React.Component {
 
                 </section>
 
-                <section id="testimonials" className="navy-section testimonials" style={{marginTop: 0}}>
+                <section id="testimonials" className="navy-section testimonials" style={{ marginTop: 0 }}>
 
                     <div className="container">
                         <div className="row">
@@ -397,7 +395,7 @@ class Home extends React.Component {
 
                 </section>
 
-                <section className="comments gray-section" style={{marginTop: 0}}>
+                <section className="comments gray-section" style={{ marginTop: 0 }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
@@ -413,7 +411,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="comments-avatar">
                                     <a href="" className="pull-left">
-                                        <img alt="image" src="img/landing/avatar3.jpg" />
+                                        <img alt="image" src={pic8} />
                                     </a>
                                     <div className="media-body">
                                         <div className="commens-name">
@@ -430,7 +428,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="comments-avatar">
                                     <a href="" className="pull-left">
-                                        <img alt="image" src="img/landing/avatar1.jpg" />
+                                        <img alt="image" src={pic9} />
                                     </a>
                                     <div className="media-body">
                                         <div className="commens-name">
@@ -447,7 +445,7 @@ class Home extends React.Component {
                                 </div>
                                 <div className="comments-avatar">
                                     <a href="" className="pull-left">
-                                        <img alt="image" src="img/landing/avatar2.jpg" />
+                                        <img alt="image" src={pic10} />
                                     </a>
                                     <div className="media-body">
                                         <div className="commens-name">
@@ -670,9 +668,10 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
+
             </div>
         )
-    };
+    }
 }
 
 export default Home;
