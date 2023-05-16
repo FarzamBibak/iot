@@ -7,6 +7,11 @@ import Login from '../Routes/login-page';
 import Register from '../Routes/register-page';
 import Test from '../Routes/test-page';
 
+// import './../Static/inspinia/style/style.css';
+// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../../node_modules/font-awesome/css/font-awesome.css';
+// import '../../node_modules/animate.css/animate.min.css';
+
 class App extends React.Component {
   render() {
     const reload = () => window.location.reload();

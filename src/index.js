@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './Parents/App';
 import reportWebVitals from './reportWebVitals';
-import './Static/Css/index.css';
-import './Static/Css/App.css';
+// import './Static/Css/index.css';
+// import './Static/Css/App.css';
 
 // react-redux
 
@@ -15,10 +15,10 @@ import { legacy_createStore as createStore } from 'redux';
 
 // inspinia packages
 
-import './Static/inspinia/style/style.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/font-awesome/css/font-awesome.css';
-import '../node_modules/animate.css/animate.min.css';
+// import './Static/inspinia/style/style.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/font-awesome/css/font-awesome.css';
+// import '../node_modules/animate.css/animate.min.css';
 
 const store = createStore(settingsReducer)
 const root = ReactDOM.createRoot(document.getElementById('root'));
