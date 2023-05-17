@@ -18,15 +18,14 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Home />
-        {/* <BrowserRouter>
+        <BrowserRouter>
           <Routes>
             <Route exact path="/" Component={Home} />
             <Route exact path="/login" Component={Login} />
             <Route exact path="/register" Component={Register} />
             <Route exact path="/test" Component={Test} />
           </Routes>
-        </BrowserRouter> */}
+        </BrowserRouter>
       </div>
     )
   }

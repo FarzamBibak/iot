@@ -1,6 +1,7 @@
 // test.js
 
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 class Test extends React.Component {
     render() {

@@ -1,14 +1,7 @@
 // home-page.js
 
 import React from "react";
-// import Menu from "../Components/menu";
-// import LoginIcon from "../Components/login-icon";
-// import { NavLink } from "react-router-dom";
-
-// import './../Static/inspinia/style/style.css';
-// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import '../../node_modules/font-awesome/css/font-awesome.css';
-// import '../../node_modules/animate.css/animate.min.css';
+import { NavLink } from "react-router-dom";
 
 class Home extends React.Component {
     componentDidMount() {
@@ -20,7 +13,7 @@ class Home extends React.Component {
             "js/inspinia.js",
             "js/plugins/pace/pace.min.js",
             "js/plugins/wow/wow.min.js",
-            "js/script.js"
+            "js/homepage-script.js"
         ], script,
             linkHrefList = [
                 "css/bootstrap.min.css",
@@ -67,7 +60,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div id="page-top" className="landing-page no-skin-config">
+            <div>
 
                 <div className="navbar-wrapper">
                     <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
