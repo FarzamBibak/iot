@@ -110,7 +110,6 @@ class Home extends React.Component {
                                     <img src="img/landing/laptop.png" alt="laptop" />
                                 </div>
                             </div>
-                            {/* <!-- Set background for slide in css --> */}
                             <div className="header-back one"></div>
 
                         </div>
@@ -122,7 +121,6 @@ class Home extends React.Component {
                                     <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                                 </div>
                             </div>
-                            {/* <!-- Set background for slide in css --> */}
                             <div className="header-back two"></div>
                         </div>
                     </div>
