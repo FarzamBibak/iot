@@ -97,16 +97,15 @@ $(document).ready(function () {
 
     // Append config box / Only for demo purpose
     // Uncomment on server mode to enable XHR calls
-    $.get("skin-config.html", function (data) {
-        if (!$('body').hasClass('no-skin-config'))
-            $('body').append(data);
-    });
+    // $.get("skin-config.html", function (data) {
+    //     if (!$('body').hasClass('no-skin-config'))--
+    //         $('body').append(data);
+    // });
 
     // Minimalize menu
     $('.navbar-minimalize').on('click', function () {
         $("body").toggleClass("mini-navbar");
         SmoothlyMenu();
-
     });
 
     // Tooltips demo
@@ -118,7 +117,7 @@ $(document).ready(function () {
 
     // Full height of sidebar
     function fix_height() {
-        var heightWithoutNavbar = $("body > #wrapper").height() - 61;
+        var heightWithoutNavbar = $("body > #root > .App > #wrapper").height() - 61;
         $(".sidebar-panel").css("min-height", heightWithoutNavbar + "px");
 
         var navbarheight = $('nav.navbar-default').height();

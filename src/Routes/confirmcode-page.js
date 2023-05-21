@@ -1,12 +1,12 @@
-// forgetpassword.js
+// confirmcode-page.js
 
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-class ForgetPassword extends React.Component {
+class ConfirmCode extends React.Component {
     componentDidMount() {
         var scriptSourceList = [
-            "js/forgetpasswordpage-script.js"
+            "js/confirmcodepage-script.js"
         ], script,
             linkHrefList = [
                 "css/bootstrap.min.css",
@@ -58,7 +58,7 @@ class ForgetPassword extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="ibox-content">
-                                <h2 className="font-bold">Forgot password</h2>
+                                <h2 className="font-bold">Confirm code</h2>
                                 <p> Enter your email address and your password will be reset and emailed to you. </p>
                                 <div className="row">
                                     <div className="col-lg-12">
@@ -81,4 +81,4 @@ class ForgetPassword extends React.Component {
     }
 }
 
-export default ForgetPassword;
+export default ConfirmCode;

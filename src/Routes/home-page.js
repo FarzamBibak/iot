@@ -72,7 +72,7 @@ class Home extends React.Component {
                                     <span className="icon-bar"></span>
                                     <span className="icon-bar"></span>
                                 </button>
-                                <a className="navbar-brand" href="index.html">WEBAPPLAYERS</a>
+                                <NavLink className="navbar-brand" exact to="/login">Register / login</NavLink>
                             </div>
                             <div id="navbar" className="navbar-collapse collapse">
                                 <ul className="nav navbar-nav navbar-right">

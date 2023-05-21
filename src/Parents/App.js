@@ -8,6 +8,7 @@ import Register from '../Routes/register-page';
 import Test from '../Routes/test-page';
 import ForgetPassword from '../Routes/forgetpassword-page';
 import Dashboard from '../Routes/dashboard-page';
+import ConfirmCode from '../Routes/confirmcode-page';
 
 // import './../Static/inspinia/style/style.css';
 // import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -28,6 +29,7 @@ class App extends React.Component {
             <Route exact path="/test" Component={Test} />
             <Route exact path="/forgetpassword" Component={ForgetPassword} />
             <Route exact path="/dashboard" Component={Dashboard} />
+            <Route exact path="/confirmcode" Component={ConfirmCode} />
           </Routes>
         </BrowserRouter>
       </div>
