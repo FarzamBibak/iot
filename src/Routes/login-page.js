@@ -1,4 +1,4 @@
-// login.js
+// login-page.js
 
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -65,12 +65,12 @@ class Login extends React.Component {
                         <h3>Welcome to iot</h3>
                         {/* <p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.</p> */}
                         <p>Login in. To see it in action.</p>
-                        <form className="m-t" role="form" action="/dashboard">
+                        <form className="m-t" role="form" action="/dashboard" autoComplete="on">
                             <div className="form-group">
-                                <input type="email" className="form-control" placeholder="Username" required="" />
+                                <input type="text" className="form-control" placeholder="Username or Email" required autoFocus />
                             </div>
                             <div className="form-group">
-                                <input type="password" className="form-control" placeholder="Password" required="" />
+                                <input type="password" className="form-control" placeholder="Password" required autoComplete="off" />
                             </div>
                             <button type="submit" className="btn btn-primary block full-width m-b"><NavLink exact to="/dashboard" />Login</button>
 

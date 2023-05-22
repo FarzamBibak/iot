@@ -1,3 +1,5 @@
+// registerpage-script.js
+
 $(document).ready(function(){
     $('body').addClass('gray-bg')
     $('.i-checks').iCheck({

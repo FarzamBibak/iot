@@ -1,3 +1,5 @@
+// homepage-script.js
+
 $(document).ready(function () {
     $('body').addClass('landing-page no-skin-config')
     $('body').attr('id', 'page-top')

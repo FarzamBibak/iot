@@ -1,3 +1,5 @@
+// dashboard-page.js
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,7 +8,8 @@ class Dashboard extends React.Component {
         super(props);
         this.state = {
             inpMsg: "0",
-            inpNot: "0"
+            inpNot: "0",
+            userName: "Nima Fathi",
         }
     }
     componentWillMount() {
@@ -31,7 +34,7 @@ class Dashboard extends React.Component {
             // "js/plugins/sparkline/jquery.sparkline.min.js",
             // "js/demo/sparkline-demo.js",
             // "js/plugins/chartJs/Chart.min.js",
-            // "js/dashboardpage-script.js",
+            "js/dashboardpage-script.js",
             "js/inspinia.js",
         ], script,
             linkHrefList = [
@@ -87,7 +90,7 @@ class Dashboard extends React.Component {
                                     <img alt="image" className="img-circle" src="img/profile_small.jpg" />
                                 </span>
                                     <a data-toggle="dropdown" className="dropdown-toggle" href="#">
-                                        <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold">David Williams</strong>
+                                        <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold"> {this.state.userName}</strong>
                                         </span> <span className="text-muted text-xs block">Art Director <b className="caret"></b></span> </span> </a>
                                     <ul className="dropdown-menu animated fadeInRight m-t-xs">
                                         <li><a href="">Profile</a></li>
@@ -320,11 +323,6 @@ class Dashboard extends React.Component {
                         <nav className="navbar navbar-static-top white-bg" role="navigation" style={{ marginBottom: 0 }}>
                             <div className="navbar-header">
                                 <a className="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i className="fa fa-bars"></i> </a>
-                                <form role="search" className="navbar-form-custom" action="">
-                                    <div className="form-group">
-                                        <input type="text" placeholder="Search for something..." className="form-control" name="top-search" id="top-search" />
-                                    </div>
-                                </form>
                             </div>
                             <ul className="nav navbar-top-links navbar-right">
                                 <li>
@@ -441,6 +439,19 @@ class Dashboard extends React.Component {
 
                         </nav>
                     </div>
+                    {/* <div class="row wrapper border-bottom white-bg page-heading">
+                        <div class="col-lg-10">
+                            <h2>Home</h2>
+                            <ol class="breadcrumb">
+                                <li className='active'>
+                                    <NavLink exact to="/dashboard" ><strong>Home</strong></NavLink>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-lg-2">
+
+                        </div>
+                    </div> */}
 
 
                     <div className="wrapper wrapper-content">

@@ -1,4 +1,4 @@
-// forgetpassword.js
+// forgetpassword-page.js
 
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -65,7 +65,7 @@ class ForgetPassword extends React.Component {
                                         {/* set action */}
                                         <form className="m-t" role="form" action="/">
                                             <div className="form-group">
-                                                <input type="email" className="form-control" placeholder="Email address" required="" />
+                                                <input type="email" className="form-control" placeholder="Email address" required autoFocus />
                                             </div>
                                             <button type="submit" className="btn btn-primary block full-width m-b">Send new password</button>
                                         </form>

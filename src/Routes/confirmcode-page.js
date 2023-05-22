@@ -59,15 +59,17 @@ class ConfirmCode extends React.Component {
                         <div className="col-md-12">
                             <div className="ibox-content">
                                 <h2 className="font-bold">Confirm code</h2>
-                                <p> Enter your email address and your password will be reset and emailed to you. </p>
+                                <p> Enter the received code that we sent to your email: </p>
                                 <div className="row">
                                     <div className="col-lg-12">
-                                        {/* set action */}
-                                        <form className="m-t" role="form" action="/">
+                                        <form className="m-t" role="form" action="/dashboard">
                                             <div className="form-group">
-                                                <input type="email" className="form-control" placeholder="Email address" required="" />
+                                                <input type="password" className="form-control" placeholder="Received code is ..." required maxlength="8" autoFocus/>
                                             </div>
-                                            <button type="submit" className="btn btn-primary block full-width m-b">Send new password</button>
+                                            <div className="buttons">
+                                                <button type="submit" className="btn btn-default block half-width m-b m-r-xs">Send Again</button>
+                                                <button type="submit" className="btn btn-primary block half-width m-b m-l-xs">Confirm</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>

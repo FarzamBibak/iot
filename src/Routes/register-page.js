@@ -1,4 +1,4 @@
-// register.js
+// register-page.js
 
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -63,19 +63,19 @@ class Register extends React.Component {
                     </div>
                     <h3>Register to iot</h3>
                     <p>Create account to see it in action.</p>
-                    <form className="m-t" role="form" action="/dashboard">
+                    <form className="m-t" role="form" action="/confirmcode" autoComplete="on">
                         <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Name" required="" />
+                            <input type="text" className="form-control" placeholder="Name" required autoFocus />
                         </div>
                         <div className="form-group">
-                            <input type="email" className="form-control" placeholder="Email" required="" />
+                            <input type="email" className="form-control" placeholder="Email" required />
                         </div>
                         <div className="form-group">
-                            <input type="password" className="form-control" placeholder="Password" required="" />
+                            <input type="password" className="form-control" placeholder="Password" required autoComplete="off" />
                         </div>
                         <div className="form-group">
                             <div className="checkbox i-checks">
-                                <label> <input type="checkbox" /> Agree the terms and policy </label>
+                                <label> <input type="checkbox" required/> Agree the terms and policy </label>
                             </div>
                         </div>
                         <button type="submit" className="btn btn-primary block full-width m-b">Register</button>

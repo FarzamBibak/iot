@@ -72,7 +72,7 @@ class Home extends React.Component {
                                     <span className="icon-bar"></span>
                                     <span className="icon-bar"></span>
                                 </button>
-                                <NavLink className="navbar-brand" exact to="/login">Register / login</NavLink>
+                                <NavLink className="navbar-brand" exact to="/login">Sign in</NavLink>
                             </div>
                             <div id="navbar" className="navbar-collapse collapse">
                                 <ul className="nav navbar-nav navbar-right">
@@ -631,7 +631,7 @@ class Home extends React.Component {
                         <div className="row m-b-lg">
                             <div className="col-lg-3 col-lg-offset-3">
                                 <address>
-                                    <strong><span className="navy">Company name, Inc.</span></strong><br />
+                                    <strong><span className="navy">Company name, pypi.</span></strong><br />
                                     795 Folsom Ave, Suite 600<br />
                                     San Francisco, CA 94107<br />
                                     <abbr title="Phone">P:</abbr> (123) 456-7890
@@ -652,9 +652,9 @@ class Home extends React.Component {
                                 <ul className="list-inline social-icon">
                                     <li><a href="#"><i className="fa fa-twitter"></i></a>
                                     </li>
-                                    <li><a href="#"><i className="fa fa-facebook"></i></a>
+                                    <li><a href="#"><i className="fa fa-telegram"></i></a>
                                     </li>
-                                    <li><a href="#"><i className="fa fa-linkedin"></i></a>
+                                    <li><a href="#"><i className="fa fa-instagram"></i></a>
                                     </li>
                                 </ul>
                             </div>
