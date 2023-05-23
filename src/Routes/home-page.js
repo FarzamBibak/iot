@@ -52,7 +52,6 @@ class Home extends React.Component {
                 link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href;
-                // link.async = false;
                 document.head.appendChild(link);
             }
         };

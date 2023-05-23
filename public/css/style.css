@@ -10391,3 +10391,11 @@ body.md-skin {
 .buttons {
   display: flex;
 }
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}

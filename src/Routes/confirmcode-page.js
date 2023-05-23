@@ -6,7 +6,8 @@ import { NavLink } from "react-router-dom";
 class ConfirmCode extends React.Component {
     componentDidMount() {
         var scriptSourceList = [
-            "js/confirmcodepage-script.js"
+            "js/confirmcodepage-script.js",
+            "js/plugins/validate/jquery.validate.min.js",
         ], script,
             linkHrefList = [
                 "css/bootstrap.min.css",
@@ -14,7 +15,8 @@ class ConfirmCode extends React.Component {
                 "css/animate.css",
                 "css/style.css"
             ], link,
-            jquerySrc = "js/jquery-3.1.1.min.js";
+            jquerySrc = "js/jquery-3.1.1.min.js",
+            jqueryValidateSrc = "js/plugins/validate/jquery.validate.min.js";
 
         function getSrc(i) {
             return i.getAttribute("src")
@@ -27,10 +29,17 @@ class ConfirmCode extends React.Component {
             let src = scriptSourceList[counter]
             if (!Array.from(document.getElementsByTagName("script")).map(getSrc).includes(src)) {
                 if (Array.from(document.getElementsByTagName("script")).map(getSrc).includes(jquerySrc)) {
-                    script = document.createElement("script");
-                    script.src = src;
-                    script.async = false;
-                    document.body.appendChild(script);
+                    if (Array.from(document.getElementsByTagName("script")).map(getSrc).includes(jqueryValidateSrc)) {
+                        script = document.createElement("script");
+                        script.src = src;
+                        script.async = false;
+                        document.body.appendChild(script);
+                    } else {
+                        script = document.createElement("script");
+                        script.src = jqueryValidateSrc;
+                        script.async = false;
+                        document.body.appendChild(script);
+                    }
                 } else {
                     script = document.createElement("script");
                     script.src = jquerySrc;
@@ -45,7 +54,6 @@ class ConfirmCode extends React.Component {
                 link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href;
-                // link.async = false;
                 document.head.appendChild(link);
             }
         };
@@ -62,9 +70,10 @@ class ConfirmCode extends React.Component {
                                 <p> Enter the received code that we sent to your email: </p>
                                 <div className="row">
                                     <div className="col-lg-12">
-                                        <form className="m-t" role="form" action="/dashboard">
+                                        <form id="register" className="m-t" role="form" action="/dashboard">
                                             <div className="form-group">
-                                                <input type="password" className="form-control" placeholder="Received code is ..." required maxlength="8" autoFocus/>
+                                                <input name="confirmCode" id="confirmCode" type="text" className="form-control" placeholder="Received code" required minLength="4" maxlength="4" autoFocus />
+                                                <p id="confirmCode-error" className="text-danger text-left"></p>
                                             </div>
                                             <div className="buttons">
                                                 <button type="submit" className="btn btn-default block half-width m-b m-r-xs">Send Again</button>

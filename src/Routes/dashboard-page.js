@@ -10,9 +10,11 @@ class Dashboard extends React.Component {
             inpMsg: "0",
             inpNot: "0",
             userName: "Nima Fathi",
+            projectNumber: "0",
+            projectNameList: [],
         }
     }
-    componentWillMount() {
+    componentDidMount() {
         var scriptSourceList = [
             "js/jquery-3.1.1.min.js",
             "js/bootstrap.min.js",
@@ -79,6 +81,13 @@ class Dashboard extends React.Component {
             }
         };
     };
+
+    addProject() {
+        // need to complete
+        var li = this.state.projectNameList
+        this.setState({projectNameList: li})
+    }
+
     render() {
         return (
             <div id="wrapper">
@@ -94,9 +103,8 @@ class Dashboard extends React.Component {
                                         </span> <span className="text-muted text-xs block">Art Director <b className="caret"></b></span> </span> </a>
                                     <ul className="dropdown-menu animated fadeInRight m-t-xs">
                                         <li><a href="">Profile</a></li>
-                                        <li><a href="">Projects</a></li>
                                         <li className="divider"></li>
-                                        <li><a href="">Logout</a></li>
+                                        <li><NavLink exact to="/">Logout</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="logo-element">
@@ -426,7 +434,7 @@ class Dashboard extends React.Component {
 
 
                                 <li>
-                                    <NavLink exact to="/login">
+                                    <NavLink exact to="/">
                                         <i className="fa fa-sign-out"></i> Log out
                                     </NavLink>
                                 </li>
@@ -491,7 +499,7 @@ class Dashboard extends React.Component {
 
                                 <div className="sidebar-title">
                                     <h3> <i className="fa fa-comments-o"></i> Latest Notes</h3>
-                                    <small><i className="fa fa-tim"></i> You have 10 new message.</small>
+                                    <small><i className="fa fa-tim"></i> You have {this.state.inpMsg} new message.</small>
                                 </div>
 
                                 <div>
@@ -620,7 +628,7 @@ class Dashboard extends React.Component {
 
                                 <div className="sidebar-title">
                                     <h3> <i className="fa fa-cube"></i> Latest projects</h3>
-                                    <small><i className="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                                    <small><i className="fa fa-tim"></i> You have {this.state.projectNumber} projects.</small>
                                 </div>
 
                                 <ul className="sidebar-list">
@@ -665,7 +673,7 @@ class Dashboard extends React.Component {
                                         <a href="#">
                                             <span className="label label-primary pull-right">NEW</span>
                                             <h4>The generated</h4>
-                                            {/* <!--<div className="small pull-right m-t-xs">9 hours ago</div>--> */}
+                                            <div className="small pull-right m-t-xs">9 hours ago</div>
                                             There are many variations of passages of Lorem Ipsum available.
                                             <div className="small">Completion with: 22%</div>
                                             <div className="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
@@ -727,7 +735,6 @@ class Dashboard extends React.Component {
 
                                 <div className="sidebar-title">
                                     <h3><i className="fa fa-gears"></i> Settings</h3>
-                                    <small><i className="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
                                 </div>
 
                                 <div className="setings-item">

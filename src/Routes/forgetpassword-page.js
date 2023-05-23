@@ -6,7 +6,8 @@ import { NavLink } from "react-router-dom";
 class ForgetPassword extends React.Component {
     componentDidMount() {
         var scriptSourceList = [
-            "js/forgetpasswordpage-script.js"
+            "js/forgetpasswordpage-script.js",
+            "js/plugins/validate/jquery.validate.min.js",
         ], script,
             linkHrefList = [
                 "css/bootstrap.min.css",
@@ -14,7 +15,8 @@ class ForgetPassword extends React.Component {
                 "css/animate.css",
                 "css/style.css"
             ], link,
-            jquerySrc = "js/jquery-3.1.1.min.js";
+            jquerySrc = "js/jquery-3.1.1.min.js",
+            jqueryValidateSrc = "js/plugins/validate/jquery.validate.min.js";
 
         function getSrc(i) {
             return i.getAttribute("src")
@@ -27,10 +29,17 @@ class ForgetPassword extends React.Component {
             let src = scriptSourceList[counter]
             if (!Array.from(document.getElementsByTagName("script")).map(getSrc).includes(src)) {
                 if (Array.from(document.getElementsByTagName("script")).map(getSrc).includes(jquerySrc)) {
-                    script = document.createElement("script");
-                    script.src = src;
-                    script.async = false;
-                    document.body.appendChild(script);
+                    if (Array.from(document.getElementsByTagName("script")).map(getSrc).includes(jqueryValidateSrc)) {
+                        script = document.createElement("script");
+                        script.src = src;
+                        script.async = false;
+                        document.body.appendChild(script);
+                    } else {
+                        script = document.createElement("script");
+                        script.src = jqueryValidateSrc;
+                        script.async = false;
+                        document.body.appendChild(script);
+                    }
                 } else {
                     script = document.createElement("script");
                     script.src = jquerySrc;
@@ -45,7 +54,6 @@ class ForgetPassword extends React.Component {
                 link = document.createElement("link");
                 link.rel = "stylesheet";
                 link.href = href;
-                // link.async = false;
                 document.head.appendChild(link);
             }
         };
@@ -63,9 +71,10 @@ class ForgetPassword extends React.Component {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         {/* set action */}
-                                        <form className="m-t" role="form" action="/">
+                                        <form id="register" className="m-t" role="form" action="/">
                                             <div className="form-group">
-                                                <input type="email" className="form-control" placeholder="Email address" required autoFocus />
+                                                <input name="email" id="email" type="email" className="form-control" placeholder="Email address" required autoFocus />
+                                                <p id="email-error" className="text-danger text-left"></p>
                                             </div>
                                             <button type="submit" className="btn btn-primary block full-width m-b">Send new password</button>
                                         </form>
